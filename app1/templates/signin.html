@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 style="text-align:center">Ingrese</h1>
+
+{{ error }}
+
+<form action="/signin/" method='POST'>
+    {% csrf_token %}
+    {{form.as_p}}
+    <button>
+        GUARDAR
+    </button>
+</form>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<article>
+    <h1 style="text-align:center">Crear un usuario</h1>
+
+    {{error}}
+
+    <form action="/signup/" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button>
+        GUARDAR
+    </button>
+    </form>
+</article>
+{% endblock %}

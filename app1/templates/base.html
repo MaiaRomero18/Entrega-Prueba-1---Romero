@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto de Ingles</title>
+</head>
+<header>
+    <article>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/home">HOME</a>
+                </li>
+                <li>
+                    <a href="/cuenta">CUENTA</a>
+                </li>
+                {% if user.is_authenticated %}
+                <li>
+                    <a href="/tasks">TAREA</a>
+                </li>
+                <li>
+                    <a href="/create">CREAR TAREA</a>
+                </li>
+                <li>
+                    <a href="/logout">SALIR DE LA SESION</a>
+                </li>
+                {% else %}
+                <li>
+                    <a href="/signup">CREAR USUARIO</a>
+                </li>
+                <li>   
+                    <a href="/signin">INGRESE</a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </article>
+</header>
+<body>
+    {% block content %}
+    
+    {% endblock %}
+</body>
+</html>

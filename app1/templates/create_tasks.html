@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>CREAR TAREA</h1>
+
+{{error}}
+
+<form action="/create/" method="POST">
+    {% csrf_token %}
+    
+    {{form}}
+
+    <button>
+        GUARDAR
+    </button>
+</form>
+
+{% endblock %}

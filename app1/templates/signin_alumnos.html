@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<article>
+    {{error}}
+    <form action="/niveles_alumnos/" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button>
+            GUARDAR
+        </button>
+    </form>
+</article>
+{% endblock %}
